@@ -6,7 +6,7 @@ Attaching the private or the public subnets is optional.
 
 ```terraform
 module "subnet_sharing" {
-  source                = "git@github.com:schubergphilis/terraform-aws-mcaf-subnet-sharing.git"
+  source                = "github.com/schubergphilis/terraform-aws-mcaf-subnet-sharing"
   name                  = "NAME"
   private_subnet_arns   = ["arn1", "arn2"]
   public_subnet_arns    = ["arn1", "arn2"]
