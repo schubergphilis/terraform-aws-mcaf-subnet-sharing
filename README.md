@@ -14,3 +14,6 @@ module "subnet_sharing" {
   tags                  = { some : "tag" }
 }
 ```
+
+<!--- BEGIN_TF_DOCS --->
+<!--- END_TF_DOCS --->
