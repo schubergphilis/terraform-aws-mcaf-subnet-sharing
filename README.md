@@ -17,7 +17,6 @@ module "subnet_sharing" {
 
 <!--- BEGIN_TF_DOCS --->
 ## Requirements
-Error: Invalid expression: Expected the start of an expression, but found an invalid expression token.
 
 | Name | Version |
 |------|---------|
