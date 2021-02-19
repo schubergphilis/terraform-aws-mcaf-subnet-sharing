@@ -5,13 +5,13 @@ resource "aws_ram_resource_share" "subnet_sharing" {
 }
 
 resource "aws_ram_resource_association" "private_subnets" {
-  for_each           = toset(var.private_subnet_arns)
-  resource_arn       = each.value
+  count              = length(var.private_subnet_arns)
+  resource_arn       = var.private_subnet_arns[count.index]
   resource_share_arn = aws_ram_resource_share.subnet_sharing.arn
 }
 
 resource "aws_ram_resource_association" "public_subnets" {
-  for_each           = toset(var.public_subnet_arns)
-  resource_arn       = each.value
+  count              = length(var.public_subnet_arns)
+  resource_arn       = var.public_subnet_arns[count.index]
   resource_share_arn = aws_ram_resource_share.subnet_sharing.arn
 }
