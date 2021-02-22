@@ -1,9 +1,9 @@
 output "id" {
-  value       = try(aws_ram_resource_share.subnet_sharing[0].id, null)
+  value       = aws_ram_resource_share.subnet_sharing.id
   description = "The ID of the subnet share in resource access manager"
 }
 
 output "arn" {
-  value       = try(aws_ram_resource_share.subnet_sharing[0].arn, null)
+  value       = aws_ram_resource_share.subnet_sharing.arn
   description = "The ARN of the subnet share in resource access manager"
 }
